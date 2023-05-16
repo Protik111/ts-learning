@@ -3,9 +3,19 @@ type AreaNumber = {
     width: number
 }
 
+type AreaNumberForGeneric = {
+    height: number,
+    width: number
+}
+
 //map
 type AreaDynamic = {
     [key in keyof AreaNumber]: AreaNumber[key]
+}
+
+//map with generic
+type AreaDynamicGeneric<T> = {
+    [key in keyof T]: T[key]
 }
 
 type AreaString = {
