@@ -1,6 +1,6 @@
 //normal function
 
-function add(num1: number, num2: number): number {
+function add5(num1: number, num2: number): number {
     return num1 + num2;
 }
 
