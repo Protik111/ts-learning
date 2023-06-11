@@ -5,8 +5,19 @@
 // 2) The function should handle arrays of any length and should return the resulting array in the same order as they appear in the first array.
 
 
-const findCommonEle: (arr1: number[], arr2: number[]) => {
-    for(let i = 0; i < arr1.length; i++) {
 
+const findCommonEle = (arr1: number[], arr2: number[]): number[] => {
+    const newArr2: number[] = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j <= arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                // console.log(j)
+                newArr2.push(arr1[i])
+            }
+        }
     }
+    return newArr2
 }
+
+console.log(findCommonEle([1, 2, 4, 5], [1, 2, 3, 4, 5]))
